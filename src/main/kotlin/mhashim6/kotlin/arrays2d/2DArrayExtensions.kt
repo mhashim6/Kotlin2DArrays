@@ -1,5 +1,9 @@
 package mhashim6.kotlin.arrays2d
 
+inline fun <reified T> matrix(row: Int, col: Int, noinline itemFactory: (i: Int, j: Int) -> T): Array<Array<T>> {
+    return Array(row) { i -> Array(col) { j -> itemFactory(i, j) } }
+}
+
 inline fun <T> Array<Array<T>>.forEach2D(action: (T) -> Unit) {
     for (array in this)
         for (item in array)
