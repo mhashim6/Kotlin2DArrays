@@ -1,5 +1,6 @@
 
 
+
 # Kotlin2DArrays
 First-class support for operations on 2D-Arrays in Kotlin
 
@@ -25,8 +26,9 @@ private val emptySpaces: List<Position>
             .map { Position(it.x, it.y) }
             .toList()
 ```
- - Other supported operations:
+ - Other supported operations/functions:
 ```kotlin
+ - matrix(row: Int, col: Int, itemFactory: (i: Int, j: Int) -> T)
  - forEach2D(action: (T) -> Unit)
  - forEachIndexed2D(action: (i: Int, j: Int, T) -> Unit)
  ```
