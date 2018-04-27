@@ -9,6 +9,12 @@ First-class support for operations on 2D-Arrays in Kotlin
 ## Usage:
 examples from [2048-OOP Game](https://github.com/mhashim6/2048-OOP):
 
+ - matrix(row: Int, col: Int, itemFactory: (i: Int, j: Int) -> T): Array<Array<T>>
+```kotlin
+val emptyMatrix = matrix<Tile>(4, 4) { i, j ->
+    EmptyTile.apply { position = Position(i, j) }
+    }
+```
  - Array<Array<*>>#asSequence2D:
 ```kotlin
 private val filledPositions: MutableList<Position>
@@ -28,7 +34,6 @@ private val emptySpaces: List<Position>
 ```
  - Other supported operations/functions:
 ```kotlin
- - matrix(row: Int, col: Int, itemFactory: (i: Int, j: Int) -> T)
  - forEach2D(action: (T) -> Unit)
  - forEachIndexed2D(action: (i: Int, j: Int, T) -> Unit)
  ```
@@ -47,6 +52,6 @@ allprojects {
 Add the dependency:
 ```groovy
 dependencies {
-    implementation 'com.github.mhashim6:Kotlin2DArrays:1.0.0'
+    implementation 'com.github.mhashim6:Kotlin2DArrays:1.0.1'
 }
 ```
