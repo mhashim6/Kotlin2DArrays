@@ -1,8 +1,11 @@
 
-
-
 # Kotlin2DArrays
 First-class support for operations on 2D-Arrays in Kotlin
+
+## Update:
+I just noticed that `flatMap` is a far more flexible and powerful solution, it makes this library completely redundant. in fact, don't even continue reading this file, head over to `flatMap`'s [documentation](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/flat-map.html) instead.
+
+---
 
 [![](https://jitpack.io/v/mhashim6/Kotlin2DArrays.svg)](https://jitpack.io/#mhashim6/Kotlin2DArrays)
 
